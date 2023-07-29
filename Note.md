@@ -75,3 +75,69 @@ definition = acronyms.get('BTW') # Using get() wont crash your program with an e
 for key, value in dict.items():
     print(key, ':', value)
 ```
+
+## Catch Exceptions with a try/except block
+```
+try:
+    definition = acronyms['BTW']
+except KeyError:
+    print('KeyError')
+
+
+def remainder_exception(a, b):
+    if b == 0:
+        raise Exception('Divisor cannot be 0')
+    else:
+        return a % b
+
+```
+
+## Open a File in Python
+```
+# open() returns a File object that has methods like read() and write()
+# It's important to close the file when you're done with it
+file = open('data.txt')
+
+# The with keyword makes file.close() automatic
+with open('data.txt') as file:
+
+    # read() method returns the whole file as a string, Or it will be return specified number of bytes
+    print(file.read())
+
+    # readline() method returns the next line of the file
+    print(file.readline())
+
+    # readlines() method returns the next lines of the file
+    result = file.readlines()
+    for line in result:
+        print(line)
+    for line in file:
+        print(line)
+
+try:
+    # Do file operations here
+    pass
+finally:
+    file.close()
+```
+
+- Check if string is a substring of a string
+```
+    if look_up in line:
+        print(line)
+```
+
+## Builin lib functions working with File
+
+### Working with file in os system
+```
+import os
+
+# os.getcwd() returns the current working directory
+os.getcwd()
+
+ok.mkdir('/Users/linuss/Documents/Python')
+
+# os.scandir() returns a list of files and directories
+os.scandir(folder)
+```
