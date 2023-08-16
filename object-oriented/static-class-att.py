@@ -13,7 +13,9 @@ class Employee:
     @classmethod
     def new_employee(cls, name, dob):
         now = date.today()
-        age = now.year - dob.year - ((now.month, now.day) < (dob.month, dob.day))
+        age = (
+            now.year - dob.year - ((now.month, now.day) < (dob.month, dob.day))
+        )
         return cls(name, age, cls.minimum_wage)
 
     def __init__(self, name, age, salary):
@@ -22,7 +24,7 @@ class Employee:
         self.salary = salary
 
     def increase_salary(self, percent):
-        self.salary += self.salary * (percent/100)
+        self.salary += self.salary * (percent / 100)
 
     @property
     def salary(self):
@@ -31,7 +33,7 @@ class Employee:
     @salary.setter
     def salary(self, salary):
         if salary < Employee.minimum_wage:
-            raise ValueError('Minimum wage is ${Employee.minimum_wage}')
+            raise ValueError("Minimum wage is ${Employee.minimum_wage}")
         self._salary = salary
 
 

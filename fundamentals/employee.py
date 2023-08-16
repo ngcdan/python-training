@@ -1,8 +1,8 @@
 class Employee:
-  def __init__(self, fname, lname, salary):
-    self.fname = fname
-    self.lname = lname
-    self.salary = salary
+    def __init__(self, fname, lname, salary):
+        self.fname = fname
+        self.lname = lname
+        self.salary = salary
 
-  def payment_check(self):
-    return self.salary/52
+    def payment_check(self):
+        return self.salary / 52

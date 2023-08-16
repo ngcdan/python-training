@@ -7,7 +7,7 @@ class Employee:
         self._annual_salary = None
 
     def increase_salary(self, percent):
-        self.salary += self.salary * (percent/100)
+        self.salary += self.salary * (percent / 100)
 
     def __str__(self):
         return f"{self.name} is {self.age} years old. Employee is a {self.position} with the salary of ${self.salary}"
@@ -26,7 +26,7 @@ class Employee:
     @salary.setter
     def salary(self, salary):
         if salary < 1000:
-            raise ValueError('Minimum wage is $1000')
+            raise ValueError("Minimum wage is $1000")
         self._annual_salary = None
         self._salary = salary
 

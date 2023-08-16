@@ -5,5 +5,4 @@ class Employee:
         self.salary = salary
 
     def increase_salary(self, percent):
-        self.salary += self.salary * (percent/100)
-
+        self.salary += self.salary * (percent / 100)
