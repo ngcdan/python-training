@@ -141,3 +141,9 @@ ok.mkdir('/Users/linuss/Documents/Python')
 # os.scandir() returns a list of files and directories
 os.scandir(folder)
 ```
+
+
+### Tuples (Immutable List)
+_a list of items that cannot change_
+
+- Looks just like a list except you use parentheses instead of square brackets
