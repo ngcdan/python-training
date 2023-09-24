@@ -65,6 +65,7 @@ squares_2 = [value**2 for value in range(1, 11)]
 print(squares_2)
 
 # Slicing a List
+print("------- Slicing a List --------------------------------")
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[0:3])
 print(players[:3])
