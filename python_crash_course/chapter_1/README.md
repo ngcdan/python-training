@@ -93,6 +93,75 @@ for dimension in dimensions:
   print(dimension)
 ```
 
+## Working with Dict
+_Collection of key - values pairs, a key's value can be a number, a string, a list or a dictionary_
+_Note: As of Python 3.7, dict retain the order of insertion_
+
+```python
+
+alien = {'color': 'green', 'points': 5}
+
+# Accessing values
+color = alien['color'] # key does not exist, => error
+# Usign get() method to set default value, if default value is not provided, then return None
+color = alien.get('color', 'red')
+
+```
+
+- Loop over dict
+```python
+user = {
+    'username': 'efermi',
+    'first': 'enrico',
+    'last': 'fermi',
+}
+for key, value in user.items():
+    print(f"\nkey: {key}")
+    print(f"value: {value}")
+
+
+# Looping through all the keys in a dict
+for key in user.keys():
+    print(key) # username, first, last
+
+# same behavior as above
+for key in user:
+    print(key)
+
+# Looping through a key in a particular order
+for key in sorted(user.keys()):
+    pass
+
+# Looping through all the values in a dict
+for value in user.values():
+    pass
+
+# Looping through all the value nonrepetitive => using set to remove duplicates
+for value in set(user.values()):
+    pass
+```
+
+## User input
+_The input() function pauses your program and waits for the user to enter something._
+
+```python
+name = input('Please enter your name!!') # => return always string value
+print(f'Hello {name}')
+
+# int() function convert string to int
+age = input('Please enter your age!!') # => return always string value
+int(age) > 18
+
+```
+
+
+
+
+
+
+
+
+
 
 
 
