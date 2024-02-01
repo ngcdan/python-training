@@ -153,14 +153,69 @@ age = input('Please enter your age!!') # => return always string value
 int(age) > 18
 
 ```
+_A for loop is affective for looping through a list, but shouldn't modify a list inside a for loop because will have trouble_
+_keeping track of the items in the list_
+
+_To modify a list as you work throught it, use a while loop_
+_Case study: Remove all instances of specific values from a List_
+
+# Working with function
+## Passing an Arbitrary Number of Arguments
+_Sometimes you won't know how many arguments a function needs to accepts._
+
+```python
+def make_pizza(*toppings):
+  """The asterisk in the argument name *toppings tells Python to make an empty tuple called toppings
+  and pack whatever values it receives into this tuple. Any number of toppings can be passed to make_pizza()
+  """
+  pass
+
+make_pizza('peperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+```
+
+- Example user_profile.py
+```python
+def build_profile(first, last, **user_info):
+  """Buld a dict containing everything we know about a user"""
+  user_info['first_name'] = first
+  user_info['last_name'] = last
+  return user_info
+
+user_profile = build_profile('albert', 'einstein', location='princeton', field='physics')
+# => {'first_name': 'albert', 'last_name': 'einstein', 'location': 'princeton', 'field': 'physics'}
+```
+
+__Storing your functions in a seperate file allows you to hide the details of your program's code and focus on its higher-level logic__
+
+# Working with File
+
+*file_reader.py*
+```python
+# Open a file, python looks in the dir where the file that's currently being executed.
+with open('file_name.txt') as file_object: # _with_ keyword automatically close the file
+  contents = file_object.read()
+print(contents)
 
 
+# Can read files from any location on your system.
+file_path = '/Users/username/Desktop/file_name.txt'
+with open(file_path) as file_object:
+  contents = file_object.read()
+print(contents)
 
+```
 
+*file_writer.py*
+```python
+# Open a file
+with open('programming.md', 'w') as file_object: # read mode (r) => default, write mode (w), append mode (a), read and write mode (r+)
+  file_object.write("\nI love programming.")
 
+```
 
-
-
+*NOTE: Python can only write strings to a text file. sometimes you have to convert the data to string using the str() func*
 
 
 
