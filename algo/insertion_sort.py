@@ -28,6 +28,7 @@ def InsertionSort(array):
         j = i - 1
         while j >= 0 and temp < array[j]:
             array[j + 1] = array[j]
+            print(*array)
             j -= 1
 
         array[j + 1] = temp
@@ -71,7 +72,18 @@ print(input)
 
 
 
+# Case study: put one element to sorted array.
+# input = [1, 2, 4, 5, 3] => [1, 2, 3, 4, 5]
+def InsertionSort_1(input):
+    current = input[-1]
+    i = len(input) - 2
+    while i >= 0 and input[i] > current:
+        input[i + 1] = input[i]
+        i -= 1
+    input[i + 1] = current
+    return input
 
+print(InsertionSort_1([1, 2 ,4, 5, 3]))
 
 
 
