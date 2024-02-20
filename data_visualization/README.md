@@ -16,5 +16,5 @@ python -m pip install matplotlib
 ```
 
 ## Datetime formating arguments from the datetime module
-![Date and Time formating](datetime_format-args.png)
+![Date and Time formating](./data/datetime_format_args.png)
 
