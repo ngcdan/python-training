@@ -15,4 +15,6 @@ python -m pip install matplotlib
  python -m pip install plotly
 ```
 
+## Datetime formating arguments from the datetime module
+![Date and Time formating](datetime_format-args.png)
 
