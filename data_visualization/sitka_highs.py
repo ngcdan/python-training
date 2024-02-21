@@ -19,14 +19,17 @@ with open(filename) as f:
 
     # reader has row remaining exclude the header
     # Get high temperature from this file
-    highs = []
+    dates, highs = [], []
     for row in reader:
+        current_date = datetime.strptime(row[0], '%Y-%m-%d')
+        dates.append(current_date)
         high = int(row[1])
         highs.append(high)
 
     # Plot the high temperatures
     fig, ax = plt.subplots()
-    ax.plot(highs, c='red')
+    ax.plot(dates, highs, c='red')
+    fig.autofmt_xdate()
 
     # Format plot
     plt.title('Daily high temperatures', fontsize=24)
